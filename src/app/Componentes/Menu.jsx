@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Menu() {
   return (
-    <nav className="bg-colors-background2 rounded-xl w-[300px] p-4 border border-white">
+    <nav className="bg-colors-background2 rounded-l-none rounded-r-xl md:rounded-xl flex justify-center w-[300px] p-2  border-colors-textoPrincipal">
       <ul className="flex gap-8">
         <LinkMenu texto="Sobre mim" endereco="/" />
         <LinkMenu texto="Projetos" endereco="/Projetos" />

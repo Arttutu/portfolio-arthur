@@ -13,7 +13,7 @@ module.exports = {
           backgroundComentario: "#fffffe",
           background2: "#242629",
           textoPrincipal: "#fffffe",
-          paragrafo: "#94a1b2",
+          paragrafo: "#CDD6F4",
           titulo: "#7f5af0",
           botao: "#7f5af0",
           destaque: "#7f5af0",
