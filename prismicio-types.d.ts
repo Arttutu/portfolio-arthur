@@ -4,12 +4,84 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+/**
+ * Item in *projetos → Tecnologias*
+ */
+export interface ProjetosDocumentDataTecnologiasItem {
+  /**
+   * TecnologiasNome field in *projetos → Tecnologias*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projetos.tecnologias[].tecnologiasnome
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  tecnologiasnome: prismic.KeyTextField;
+}
+
 type ProjetosDocumentDataSlicesSlice = never;
 
 /**
  * Content for projetos documents
  */
 interface ProjetosDocumentData {
+  /**
+   * Titulo field in *projetos*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projetos.titulo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  titulo: prismic.RichTextField;
+
+  /**
+   * SubTitulo field in *projetos*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projetos.subtitulo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  subtitulo: prismic.RichTextField;
+
+  /**
+   * DescriaoProjeto field in *projetos*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projetos.descriaoprojeto
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  descriaoprojeto: prismic.RichTextField;
+
+  /**
+   * LinkSite field in *projetos*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projetos.linksite
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  linksite: prismic.RichTextField;
+
+  /**
+   * Tecnologias field in *projetos*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projetos.tecnologias[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  tecnologias: prismic.GroupField<
+    Simplify<ProjetosDocumentDataTecnologiasItem>
+  >;
+
   /**
    * Slice Zone field in *projetos*
    *
@@ -19,38 +91,7 @@ interface ProjetosDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<ProjetosDocumentDataSlicesSlice> /**
-   * Meta Title field in *projetos*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: projetos.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_title: prismic.KeyTextField;
-
-  /**
-   * Meta Description field in *projetos*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: projetos.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *projetos*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: projetos.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
+  slices: prismic.SliceZone<ProjetosDocumentDataSlicesSlice>;
 }
 
 /**
@@ -83,6 +124,7 @@ declare module "@prismicio/client" {
     export type {
       ProjetosDocument,
       ProjetosDocumentData,
+      ProjetosDocumentDataTecnologiasItem,
       ProjetosDocumentDataSlicesSlice,
       AllDocumentTypes,
     };

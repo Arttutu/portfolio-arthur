@@ -14,7 +14,7 @@ export default function Home() {
       </p>
       <p className="text-colors-paragrafo text-base sm:text-lg">
         Minha trajetória começou na faculdade de Bacharelado em
-        <span className="text-colors-destaque font-bold">
+        <span className=" mx-2 text-colors-destaque font-bold">
           Ciências da tecnologia
         </span>
         na Universidade federal do ABC, que ingressei em 2018, Ainda na
@@ -23,10 +23,10 @@ export default function Home() {
       </p>
       <p className="text-colors-paragrafo text-base sm:text-lg">
         Após isso, transicionei minha carreira acadêmica para o curso de
-        <span className="text-colors-destaque font-bold">
-          Analise e Desenvolvimento de Sistema
+        <span className=" mx-2 text-colors-destaque font-bold">
+          Analise e Desenvolvimento de Sistema.
         </span>
-        . Meu dia a dia envolve estudar muito e desenvelver projetos e trabalhos
+        Meu dia a dia envolve estudar muito e desenvelver projetos e trabalhos
         freelancer em{" "}
         <span className="text-colors-destaque font-bold">React</span>,
         <span className="text-colors-destaque font-bold"> Next.js</span>,
