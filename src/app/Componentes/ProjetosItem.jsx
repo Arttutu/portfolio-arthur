@@ -32,20 +32,20 @@ const iconMap = {
 export function ProjetosItem({ projetos }) {
   return (
     <Link href={asText(projetos.data.linksite)} target="_blank" className="">
-      <div className="flex flex-col gap-2 p-4 bg-colors-background rounded-lg cursor-pointer">
+      <div className="flex flex-col gap-2 p-4 bg-colors-backgroundClaro dark:bg-colors-background rounded-lg cursor-pointer">
         <div className="flex flex-col gap-2">
           <div className="flex justify-between items-center">
-            <h3 className="text-colors-textoPrincipal text-xl transition-opacity duration-200 dark:text-white hover:opacity-70">
+            <h3 className="dark:text-colors-textoPrincipal text-xl transition-opacity duration-200 text-black hover:opacity-70">
               {/*  {asText(projetos.data.titulo)} */}
               <PrismicRichText field={projetos.data.titulo} />
             </h3>
-            <Pasta className="text-colors-paragrafo text-lg" />
+            <Pasta className="text-black dark:text-colors-paragrafo text-lg" />
           </div>
-          <h2 className="text-colors-paragrafo text-lg">
+          <h2 className="text-colors-paragrafo2 dark:text-colors-paragrafo text-lg">
             {asText(projetos.data.subtitulo)}
           </h2>
-          <div className="bg-colors-background2 rounded-lg p-4">
-            <p className="text-colors-paragrafo text-md">
+          <div className="bg-colors-destaque dark:bg-colors-background2 rounded-lg p-4">
+            <p className=" text-white dark:text-colors-paragrafo text-md">
               {asText(projetos.data.descriaoprojeto)}
             </p>
           </div>

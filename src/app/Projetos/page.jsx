@@ -9,7 +9,7 @@ export default async function Projetos() {
     return [];
   });
   return (
-    <div className="bg-colors-background2  mt-4 mb-4 p-4  rounded-lg">
+    <div className="bg-colors-backgroundClar2 dark:bg-colors-background2  mt-4 mb-4 p-4  rounded-lg">
       <h2 className="text-lg font-bold tracking-tight  mb-2 sm:text-2xl text-slate-900 dark:text-white ">
         Portfólio
       </h2>
