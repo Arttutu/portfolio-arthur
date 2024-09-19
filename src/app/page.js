@@ -5,7 +5,7 @@ export default function Home() {
         <h1 className="text-black dark:text-colors-textoPrincipal font-bold mb-2 text-2xl">
           Sobre mim
         </h1>
-        <div className="w-16 h-1 bg-colors-destaque rounded-xl"></div>
+        <div className="w-16 h-2 bg-colors-destaque rounded-xl"></div>
       </div>
 
       <p className="text-colors-paragrafo2 dark:text-colors-paragrafo text-base sm:text-lg">

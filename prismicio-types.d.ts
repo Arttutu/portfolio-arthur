@@ -5,6 +5,97 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 /**
+ * Item in *GaleriaProjetos → imagens*
+ */
+export interface GaleriaprojetosDocumentDataImagensItem {
+  /**
+   * GaleriaImagens field in *GaleriaProjetos → imagens*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: galeriaprojetos.imagens[].galeriaimagens
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  galeriaimagens: prismic.ImageField<never>;
+}
+
+type GaleriaprojetosDocumentDataSlicesSlice = never;
+
+/**
+ * Content for GaleriaProjetos documents
+ */
+interface GaleriaprojetosDocumentData {
+  /**
+   * imagens field in *GaleriaProjetos*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: galeriaprojetos.imagens[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  imagens: prismic.GroupField<Simplify<GaleriaprojetosDocumentDataImagensItem>>;
+
+  /**
+   * Slice Zone field in *GaleriaProjetos*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: galeriaprojetos.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<GaleriaprojetosDocumentDataSlicesSlice> /**
+   * Meta Title field in *GaleriaProjetos*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: galeriaprojetos.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *GaleriaProjetos*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: galeriaprojetos.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *GaleriaProjetos*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: galeriaprojetos.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * GaleriaProjetos document from Prismic
+ *
+ * - **API ID**: `galeriaprojetos`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type GaleriaprojetosDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<GaleriaprojetosDocumentData>,
+    "galeriaprojetos",
+    Lang
+  >;
+
+/**
  * Item in *projetos → Tecnologias*
  */
 export interface ProjetosDocumentDataTecnologiasItem {
@@ -110,7 +201,7 @@ export type ProjetosDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = ProjetosDocument;
+export type AllDocumentTypes = GaleriaprojetosDocument | ProjetosDocument;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -122,6 +213,10 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      GaleriaprojetosDocument,
+      GaleriaprojetosDocumentData,
+      GaleriaprojetosDocumentDataImagensItem,
+      GaleriaprojetosDocumentDataSlicesSlice,
       ProjetosDocument,
       ProjetosDocumentData,
       ProjetosDocumentDataTecnologiasItem,

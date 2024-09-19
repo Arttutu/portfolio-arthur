@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Info() {
   return (
     <aside className=" flex flex-col sm:flex sm:flex-row md:flex md md:flex-col gap-4">
-      <div className=" shadow-colors-background shadow-lg  bg-colors-backgroundClar2   dark:bg-colors-background2   md:h-auto p-5 rounded-none md:rounded-lg w-full md:w-[400px] flex flex-col gap-2 items-center justify-center">
+      <div className="bg-colors-backgroundClar2   dark:bg-colors-background2   md:h-auto p-5 rounded-none md:rounded-lg w-full md:w-[400px] flex flex-col gap-2 items-center justify-center">
         <Image
           src={arthur}
           alt="minha foto"
@@ -39,7 +39,7 @@ export default function Info() {
           </Link>
         </div>
       </div>
-      <div className="flex  flex-col gap-4  w-full  md:h-auto bg-colors-backgroundClar2 dark:bg-colors-background2 p-5 rounded-none md:rounded-lg">
+      <div className="flex   flex-col gap-4  w-full  md:h-auto bg-colors-backgroundClar2 dark:bg-colors-background2 p-5 rounded-none md:rounded-lg">
         <div className="flex  items-center gap-4">
           <div className="p-2 rounded-lg bg-colors-background">
             <MdEmail className="text-colors-paragrafo text-2xl" />

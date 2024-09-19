@@ -15,11 +15,11 @@ export default function Tema() {
   return (
     <div className="">
       <FiSun
-        className="cursor-pointer text-black text-4xl bg-colors-backgroundClar2 dark:bg-colors-background2 p-2 rounded-r-none  rounded-lg md:rounded-lg   transition-all block dark:hidden dark:text-white "
+        className="cursor-pointer  text-colors-destaque text-4xl bg-colors-backgroundClar2 dark:bg-colors-background2 p-2 rounded-r-none  rounded-lg md:rounded-lg   transition-all block dark:hidden"
         onClick={toogle}
       />
       <FiMoon
-        className=" cursor-pointer text-colors-textoPrincipal  text-4xl bg-colors-background2 p-2 rounded-r-none  rounded-lg md:rounded-lg   transition-all hidden dark:block"
+        className=" cursor-pointer text-colors-destaque  text-4xl bg-colors-background2 p-2 rounded-r-none  rounded-lg md:rounded-lg   transition-all hidden dark:block"
         onClick={toogle}
       />
     </div>
