@@ -33,6 +33,7 @@ export default function RootLayout({ children }) {
         <main className="relative">
           <div className="container  mx-auto flex flex-col  md:flex md:flex-row gap-4 mt-[20px]">
             <Info />
+
             <div>
               <div className="hidden md:flex items-center justify-between">
                 <Menu />
