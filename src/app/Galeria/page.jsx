@@ -1,5 +1,5 @@
 import { createClient } from "@/prismicio";
-import { GaleriaItem } from "../Componentes/Galeriaitem";
+import { GaleriaItem } from "../Componentes/GaleriaItem";
 export default async function Galeria() {
   const prismicClient = createClient();
   const galerias = await prismicClient
