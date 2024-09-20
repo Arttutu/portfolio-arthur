@@ -8,19 +8,20 @@ export default function IconeSuspenso() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      if (scrollPosition > window.innerHeight * 0.1) {
-        setShowIcon(true);
-      } else {
-        setShowIcon(false);
+      if (typeof window !== "undefined") {
+        const scrollPosition = window.scrollY;
+        if (scrollPosition > window.innerHeight * 0.1) {
+          setShowIcon(true);
+        } else {
+          setShowIcon(false);
+        }
       }
     };
-
-    handleScroll(); // Para verificar o scroll ao carregar a página
-    window.addEventListener("scroll", handleScroll); // Verificar rolagem
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll); // Limpar listener
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -28,14 +29,16 @@ export default function IconeSuspenso() {
 
   return (
     <ScrollLink smooth={true} duration={500} to="logo">
-      <div
+      <button
+        aria-label="Voltar para o topo"
+        variant="outline"
         className="flex justify-center fixed bottom-0 left-1/2 transform -translate-x-1/2 
     md:left-auto md:right-4 md:translate-x-0 md:w-12
     bg-colors-backgroundClar2 dark:bg-colors-background2 p-2 rounded-lg rounded-b-none md:rounded-lg 
     cursor-pointer transition-all"
       >
         <IoIosArrowDropup className="text-colors-destaque text-4xl" />
-      </div>
+      </button>
     </ScrollLink>
   );
 }

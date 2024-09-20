@@ -17,6 +17,14 @@ export const repositoryName =
  */
 // TODO: Update the routes array to match your project's route structure.
 const routes = [
+  {
+    type: "projetos", // Tipo do documento para postagens do blog
+    path: "/:uid", // Caminho dinâmico da URL para cada postagem, baseado em seu UID
+  },
+  {
+    type: "galeriaprojetos", // Tipo do documento para postagens do blog
+    path: "/:uid", // Caminho dinâmico da URL para cada postagem, baseado em seu UID
+  },
   // Examples:
   // {
   // 	type: "homepage",
@@ -41,6 +49,7 @@ export const createClient = (config = {}) => {
       process.env.NODE_ENV === "production"
         ? { next: { tags: ["prismic"] }, cache: "force-cache" }
         : { next: { revalidate: 5 } },
+    accessToken: process.env.PRISMIC_ACCESS_TOKEN,
     ...config,
   });
 
