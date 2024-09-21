@@ -1,6 +1,5 @@
 "use client";
 import { FiMoon, FiSun } from "react-icons/fi";
-import { useEffect } from "react";
 
 export default function Tema() {
   const toogle = () => {
