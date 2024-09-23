@@ -1,10 +1,9 @@
 import "./globals.css";
-import Menu from "./Componentes/Menu";
-import Info from "./Componentes/Info";
+import Info from "./Componentes/InfoArthur/index.";
 import Logo from "./Componentes/Logo";
 import { JetBrains_Mono } from "next/font/google";
-import Tema from "./Componentes/ToggleTema";
 import IconeSuspenso from "./Componentes/IconeSuspenso";
+import Header from "./Componentes/Header";
 
 const fonte = JetBrains_Mono({ subsets: ["latin"] });
 
@@ -25,20 +24,13 @@ export default function RootLayout({ children }) {
       >
         <header className="container mx-auto text-center md:text-left mt-4 flex flex-col gap-8">
           <Logo />
-          <div className="flex items-center justify-between  md:hidden">
-            <Menu />
-            <Tema />
-          </div>
+          <Header mobile={true} />
         </header>
         <main className="relative">
           <div className="container  mx-auto flex flex-col  md:flex md:flex-row gap-4 mt-[20px]">
             <Info />
-
             <div>
-              <div className="hidden md:flex items-center justify-between">
-                <Menu />
-                <Tema />
-              </div>
+              <Header mobile={false} />
               {children}
             </div>
           </div>

@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <section className="bg-colors-backgroundClar2 dark:bg-colors-background2 p-5 mt-4 rounded-lg flex flex-col gap-8">
       <div className="flex flex-col">
-        <h1 className="text-black dark:text-colors-textoPrincipal font-bold mb-2 text-2xl">
+        <h1 className="text-black dark:text-colors-textoPrincipal font-bold mb-2 text-lg sm:text-2xl">
           Sobre mim
         </h1>
         <div className="w-16 h-2 bg-colors-destaque rounded-xl"></div>

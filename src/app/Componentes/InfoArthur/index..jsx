@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import arthur from "../assets/img/arthur.jpeg";
+import arthur from "../../assets/img/arthur.jpeg";
 import { RiGithubLine, RiLinkedinFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
 import { IoMdPin } from "react-icons/io";
@@ -32,7 +32,7 @@ export default function Info() {
   }
 
   return (
-    <aside className="flex flex-col sm:flex sm:flex-row md:flex md:flex-col gap-4">
+    <aside className=" flex flex-col sm:flex sm:flex-row md:flex md:flex-col gap-4">
       <div className="bg-colors-backgroundClar2 dark:bg-colors-background2 md:h-auto p-5 rounded-none md:rounded-lg w-full md:w-[400px] flex flex-col gap-2 items-center justify-center">
         <Image
           src={arthur}
