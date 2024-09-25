@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <section className="bg-colors-backgroundClar2 dark:bg-colors-background2 p-5 mt-4 rounded-lg flex flex-col gap-8">
+    <section className="bg-colors-backgroundClar2 dark:bg-colors-background2 p-5 mt-4  rounded-none md:rounded-lg flex flex-col gap-8">
       <div className="flex flex-col">
         <h1 className="text-black dark:text-colors-textoPrincipal font-bold mb-2 text-lg sm:text-2xl">
           Sobre mim

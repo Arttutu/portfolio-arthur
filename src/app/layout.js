@@ -22,20 +22,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${fonte.className} bg-colors-backgroundClaro dark:bg-colors-background  antialiased h-screen`}
       >
-        <header className="container mx-auto text-center md:text-left mt-4 flex flex-col gap-8">
-          <Logo />
-          <Header mobile={true} />
-        </header>
-        <main className="relative">
-          <div className="container  mx-auto flex flex-col  md:flex md:flex-row gap-4 mt-[20px]">
-            <Info />
-            <div>
-              <Header mobile={false} />
-              {children}
-            </div>
-          </div>
-          <IconeSuspenso />
-        </main>
+        {children}
       </body>
     </html>
   );

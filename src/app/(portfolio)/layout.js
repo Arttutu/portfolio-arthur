@@ -1,0 +1,26 @@
+import React from "react";
+import Logo from "../Componentes/Logo";
+import Header from "../Componentes/Header";
+import Info from "../Componentes/InfoArthur/index.";
+import IconeSuspenso from "../Componentes/IconeSuspenso";
+
+export default function layout({ children }) {
+  return (
+    <>
+      <header className="container mx-auto text-center md:text-left mt-4 flex flex-col gap-8 ">
+        <Logo />
+        <Header mobile={true} />
+      </header>
+      <main className="relative">
+        <div className="container  mx-auto flex flex-col  md:flex md:flex-row gap-4 mt-[20px]">
+          <Info />
+          <div>
+            <Header mobile={false} />
+            {children}
+          </div>
+        </div>
+        <IconeSuspenso />
+      </main>
+    </>
+  );
+}
