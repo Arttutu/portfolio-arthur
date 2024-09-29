@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../Componentes/Logo";
 import Header from "../Componentes/Header";
 import Info from "../Componentes/InfoArthur/index.";
-import IconeSuspenso from "../Componentes/IconeSuspenso";
+import SubirBotao from "../Componentes/SubirBotao";
 
 export default function layout({ children }) {
   return (
@@ -19,7 +19,7 @@ export default function layout({ children }) {
             {children}
           </div>
         </div>
-        <IconeSuspenso />
+        <SubirBotao />
       </main>
     </>
   );

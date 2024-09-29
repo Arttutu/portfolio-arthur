@@ -12,10 +12,11 @@ import {
   SiNodedotjs,
   SiMongodb,
   SiFigma,
+  SiPrismic,
 } from "react-icons/si";
-import { FaReact, FaRegFolder as Pasta } from "react-icons/fa";
+import { FaReact, FaExternalLinkAlt as Ancora } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { PrismicRichText } from "@prismicio/react";
+import { PrismicImage, PrismicRichText } from "@prismicio/react";
 import { motion } from "framer-motion"; // Importando Framer Motion
 
 const iconMap = {
@@ -25,6 +26,7 @@ const iconMap = {
   Radix: <SiRadixui />,
   Nextjs: <SiNextdotjs />,
   Prisma: <SiPrisma />,
+  Prismic: <SiPrismic />,
   TypeScript: <SiTypescript />,
   JavaScript: <SiJavascript />,
   MongoDB: <SiMongodb />,
@@ -40,14 +42,14 @@ export function ProjetosItem({ projetos }) {
         whileHover={{ scale: 1.02 }} // Escalando o card levemente ao hover
         whileTap={{ scale: 0.95 }} // Pequena animação ao clicar
         transition={{ type: "spring", stiffness: 300 }} // Transição suave
-        className="flex flex-col gap-2 p-4 w-full bg-colors-backgroundClaro dark:bg-colors-background rounded-lg cursor-pointer"
+        className=" flex flex-col  gap-2 p-4 w-full bg-colors-backgroundClaro dark:bg-colors-background rounded-lg cursor-pointer"
       >
         <div className="flex flex-col gap-2">
           <div className="flex justify-between items-center">
-            <h3 className="dark:text-colors-textoPrincipal text-xl transition-opacity duration-200 text-colors-destaque hover:opacity-70">
+            <h3 className="dark:text-colors-textoPrincipal text-xl transition-opacity duration-200 text-colors-destaque hover:opacity-70 flex items-center gap-2">
               <PrismicRichText field={projetos.data.titulo} />
             </h3>
-            <Pasta className="text-colors-destaque text-lg" />
+            <Ancora className="dark:text-colors-paragrafo text-colors-paragrafo2 text-lg" />
           </div>
           <h2 className="text-colors-paragrafo2 dark:text-colors-paragrafo text-lg">
             {asText(projetos.data.subtitulo)}
@@ -60,7 +62,7 @@ export function ProjetosItem({ projetos }) {
         </div>
         <div className="flex flex-wrap items-center mt-4 gap-4">
           {projetos.data.tecnologias.map((item, index) => (
-            <ul key={index} className="rounded-lg bg-black p-2">
+            <ul key={index} className={`rounded-lg bg-colors-background2 p-2`}>
               <li className="text-sm text-colors-paragrafo flex gap-2 items-center">
                 {iconMap[item.tecnologiasnome]}
                 {item.tecnologiasnome}

@@ -9,8 +9,6 @@ export default async function Blog() {
     console.error(e);
   });
 
-  console.log("Dados do Prismic:", Blog); // Verificando o retorno do Prismic
-
   return (
     <section className="w-full bg-colors-backgroundClar2 dark:bg-colors-background2  mt-4 mb-4 p-4 rounded-none md:rounded-lg">
       <Titles title={"Meu Blog"} />

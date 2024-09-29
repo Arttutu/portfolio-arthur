@@ -3,7 +3,7 @@ import { Link as ScrollLink } from "react-scroll";
 import { useEffect, useState } from "react";
 import { IoIosArrowDropup } from "react-icons/io";
 
-export default function IconeSuspenso() {
+export default function SubirBotao() {
   const [showIcon, setShowIcon] = useState(false);
 
   useEffect(() => {

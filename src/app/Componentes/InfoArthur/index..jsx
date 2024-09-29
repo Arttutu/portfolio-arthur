@@ -27,7 +27,7 @@ export default function Info() {
   }, []);
 
   // Se for mobile e não estiver na rota "/", não renderiza o componente
-  if (isMobile && paginaAtual !== "/") {
+  if ((isMobile && paginaAtual !== "/") || paginaAtual == "/Galeria") {
     return null;
   }
 

@@ -1,9 +1,5 @@
 import "./globals.css";
-import Info from "./Componentes/InfoArthur/index.";
-import Logo from "./Componentes/Logo";
 import { JetBrains_Mono } from "next/font/google";
-import IconeSuspenso from "./Componentes/IconeSuspenso";
-import Header from "./Componentes/Header";
 
 const fonte = JetBrains_Mono({ subsets: ["latin"] });
 

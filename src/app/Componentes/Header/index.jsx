@@ -1,5 +1,5 @@
 import Menu from "../NavBar";
-import Tema from "../ToggleTema";
+import Tema from "../ToogleTema";
 
 export default function Header({ mobile }) {
   return (
