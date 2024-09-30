@@ -51,14 +51,14 @@ export default function Info() {
           <Link
             href="https://github.com/Arttutu"
             target="_blank"
-            className="p-2 rounded-lg bg-colors-background"
+            className="p-2 rounded-lg bg-colors-background duration-200 hover:opacity-75"
           >
             <RiGithubLine className="text-2xl text-colors-textoPrincipal" />
           </Link>
           <Link
             href="https://www.linkedin.com/in/santos-gomes/"
             target="_blank"
-            className="p-2 rounded-lg bg-colors-background"
+            className="p-2 rounded-lg bg-colors-background  duration-200 hover:opacity-75"
           >
             <RiLinkedinFill className="text-2xl text-colors-textoPrincipal" />
           </Link>

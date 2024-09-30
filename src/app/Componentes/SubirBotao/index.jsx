@@ -32,7 +32,7 @@ export default function SubirBotao() {
       <button
         aria-label="Voltar para o topo"
         variant="outline"
-        className="flex justify-center fixed bottom-0 left-1/2 transform -translate-x-1/2 
+        className="flex justify-center fixed bottom-0 md:bottom-2 left-1/2 transform -translate-x-1/2 
     md:left-auto md:right-4 md:translate-x-0 md:w-12
     bg-colors-backgroundClar2 dark:bg-colors-background2 p-2 rounded-lg rounded-b-none md:rounded-lg 
     cursor-pointer transition-all"

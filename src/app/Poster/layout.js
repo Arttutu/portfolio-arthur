@@ -15,7 +15,7 @@ export default function LayoutPost({ children }) {
         <Logo />
       </header>
       <main className="dark:bg-colors-background bg-colors-backgroundClaro  container mx-auto">
-        <div className=" flex justify-between mt-4 mx-4  md:my-8 md:mx-0">
+        <div className=" flex justify-between mt-4 mx-4  md:my-8 md:mx-0 ">
           <VoltarBotao voltar_endereco={"/Blog"} />
           <Tema />
         </div>
@@ -44,7 +44,7 @@ export default function LayoutPost({ children }) {
           <span className="text-colors-paragrafo2 dark:text-colors-paragrafo text-sm md:text-lg">
             {">"}
           </span>
-          <span className="text-colors-paragrafo2 dark:text-colors-paragrafo text-sm md:text-lg">
+          <span className="font-bold text-black dark:text-white text-sm md:text-lg">
             {url.uid}
           </span>
         </div>

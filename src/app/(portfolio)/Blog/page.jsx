@@ -15,7 +15,7 @@ export default async function Blog() {
       <p className="text-lg dark:text-colors-paragrafo text-colors-paragrafo2">
         Blog onde vou escrever sobre tutoriais e dicas de programação.
       </p>
-      <div className="flex flex-col gap-8 ">
+      <div className=" w-full flex flex-col gap-8 ">
         {Blog.length > 0 ? (
           Blog.map((blogItem) => <BlogItem key={blogItem.id} blog={blogItem} />)
         ) : (

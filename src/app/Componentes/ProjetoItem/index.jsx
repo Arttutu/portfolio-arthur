@@ -16,7 +16,7 @@ import {
 } from "react-icons/si";
 import { FaReact, FaExternalLinkAlt as Ancora } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { PrismicImage, PrismicRichText } from "@prismicio/react";
+import { PrismicRichText } from "@prismicio/react";
 import { motion } from "framer-motion"; // Importando Framer Motion
 
 const iconMap = {
