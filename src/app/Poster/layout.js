@@ -2,10 +2,10 @@
 import React from "react";
 import Logo from "../Componentes/Logo";
 import Tema from "../Componentes/ToogleTema";
-import Link from "next/link";
 import { useParams } from "next/navigation";
 import SubirBotao from "../Componentes/SubirBotao";
 import VoltarBotao from "../Componentes/VoltarBotao";
+import Link from "next/link";
 
 export default function LayoutPost({ children }) {
   const url = useParams();
@@ -16,7 +16,7 @@ export default function LayoutPost({ children }) {
       </header>
       <main className="dark:bg-colors-background bg-colors-backgroundClaro  container mx-auto">
         <div className=" flex justify-between mt-4 mx-4  md:my-8 md:mx-0 ">
-          <VoltarBotao voltar_endereco={"/Blog"} />
+          <VoltarBotao voltar_endereco="/Blog" texto="Voltar" />
           <Tema />
         </div>
         <div className="flex flex-wrap p-2 items-center gap-2 mb-4">

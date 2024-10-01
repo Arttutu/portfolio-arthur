@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function BlogItem({ blog }) {
   return (
     <div className="mt-8 w-full container ">
-      <article className="w-full md:w-[1100px] flex flex-col gap-8 items-start md:flex md:flex-row md:items-center justify-between md:gap-8 p-4  bg-colors-backgroundClaro dark:bg-colors-background rounded-lg cursor-pointer">
+      <article className="w-full xl:w-[750px] 2xl:w-[1100px] flex flex-col-reverse gap-8 items-start md:flex md:flex-row md:items-center justify-between md:gap-8 p-4  bg-colors-backgroundClaro dark:bg-colors-background rounded-lg cursor-pointer">
         <div className="  flex flex-col gap-2 md:gap-4">
           <Link href={`/Poster/${blog.uid}`}>
             <h2 className="dark:text-colors-textoPrincipal text-xl transition-opacity duration-200 text-colors-destaque hover:opacity-70">

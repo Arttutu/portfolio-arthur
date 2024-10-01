@@ -32,7 +32,7 @@ export default function Logo() {
         initial="hidden"
         animate="visible"
         variants={containerAnimation}
-        className=" text-2xl sm:text-3xl text-colors-titulo font-bold hover:text-white transition-all"
+        className=" text-2xl sm:text-3xl text-colors-titulo font-bold duration-200 hover:dark:text-white hover:text-colors-background transition-all"
       >
         {"<ArthurGomes.dev/>".split("").map((letra, index) => (
           <motion.span key={index} variants={letterAnimation}>

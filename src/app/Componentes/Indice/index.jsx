@@ -1,25 +1,52 @@
+"use client";
 import { asText } from "@prismicio/client";
-import Link from "next/link";
+import { useEffect, useState } from "react";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import { FaBook } from "react-icons/fa";
-
+import Link from "next/link";
 export default function Indice({ post }) {
+  const [hash, setHash] = useState("");
+
+  useEffect(() => {
+    // Captura o hash quando a página carrega
+    setHash(window.location.hash);
+
+    // Escuta mudanças no hash da URL
+    const handleHashChange = () => {
+      setHash(window.location.hash);
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
+
   return (
     <div className="w-96 dark:bg-colors-background2 bg-colors-backgroundClar2 rounded-lg p-4">
       <h1 className="flex gap-2 items-center text-xl font-bold dark:text-colors-paragrafo text-colors-paragrafo2 ">
-        <FaBook className=" text-colors-destaque" />
+        <FaBook className="text-2xl text-colors-destaque" />
         Índice
       </h1>
-      <div></div>
-      <ul className="p-4 flex flex-col gap-4">
+      <span className="text-colors-destaque mt-8">
+        Fragmento da URL: {hash ? hash : "Nenhum fragmento"}
+      </span>
+
+      <div className="bg-colors-background2 dark:bg-colors-backgroundClar2 h-[1px] mt-4 w-full"></div>
+      <ul className="p-4 flex flex-col gap-4  list-none">
         {post.data.conteudo.map((item, index) => (
-          <Link
-            scroll
+          <a
             key={index}
-            href={`#${item.title}`}
-            className=" list-disc text-md dark:text-colors-paragrafo text-colors-paragrafo2"
+            href={`#${asText(item.title)}`}
+            className={`flex gap-4 items-center justify-start text-lg  text-md hover:text-colors-destaque hover:dark:text-colors-destaque duration-200 transition-all 
+              ${hash === `#${asText(item.title)}` ? "text-colors-destaque font-bold" : "dark:text-colors-paragrafo list-disc text-colors-paragrafo2"}`}
           >
+            <MdKeyboardDoubleArrowRight
+              className={`  ${hash === `#${asText(item.title)}` ? "text-colors-destaque text-3xl" : "hidden"}`}
+            />
             <li>{asText(item.title)}</li>
-          </Link>
+          </a>
         ))}
       </ul>
     </div>
