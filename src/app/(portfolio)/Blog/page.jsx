@@ -1,14 +1,12 @@
 import BlogItem from "@/app/Componentes/BlogItem";
+import { Buscador } from "@/app/Componentes/Buscador";
 import Titles from "@/app/Componentes/Titles";
 import { createClient } from "@/prismicio";
-import React from "react";
-
 export default async function Blog() {
   const prismicClient = createClient();
   const Blog = await prismicClient.getAllByType("blog").catch((e) => {
     console.error(e);
   });
-
   return (
     <section className="w-full bg-colors-backgroundClar2 dark:bg-colors-background2  mt-4 mb-4 p-4 rounded-none md:rounded-lg">
       <Titles title={"Meu Blog"} />
@@ -20,22 +18,14 @@ export default async function Blog() {
           {Blog.length}/{Blog.length}
         </span>
         <span className="text-lg dark:text-colors-paragrafo text-colors-paragrafo2">
-          Posts
+          postagem(s)
         </span>
       </div>
-      <input
-        className="w-full rounded-lg p-2 mt-4 outline-none"
-        placeholder="Busque uma postagem"
-      />
-
+      <Buscador Blog={Blog} />
       <div className=" w-full flex flex-col gap-8 ">
-        {Blog.length > 0 ? (
-          Blog.map((blogItem) => <BlogItem key={blogItem.id} blog={blogItem} />)
-        ) : (
-          <p className="text-lg dark:text-colors-paragrafo text-colors-paragrafo2 mt-8">
-            Nenhum blog encontrado.
-          </p>
-        )}
+        {Blog.map((blogItem) => (
+          <BlogItem key={blogItem.id} blog={blogItem} />
+        ))}
       </div>
     </section>
   );

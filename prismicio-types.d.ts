@@ -311,17 +311,6 @@ interface ProjetosDocumentData {
   descriaoprojeto: prismic.RichTextField;
 
   /**
-   * LinkSite field in *projetos*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: projetos.linksite
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  linksite: prismic.RichTextField;
-
-  /**
    * Tecnologias field in *projetos*
    *
    * - **Field Type**: Group
@@ -333,6 +322,28 @@ interface ProjetosDocumentData {
   tecnologias: prismic.GroupField<
     Simplify<ProjetosDocumentDataTecnologiasItem>
   >;
+
+  /**
+   * LinkSite field in *projetos*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projetos.linksite
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  linksite: prismic.RichTextField;
+
+  /**
+   * ImagemProjeto field in *projetos*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projetos.imagemprojeto
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  imagemprojeto: prismic.ImageField<never>;
 
   /**
    * Slice Zone field in *projetos*

@@ -32,7 +32,7 @@ export default function Info() {
   }
 
   return (
-    <aside className=" flex flex-col sm:flex sm:flex-row md:flex md:flex-col gap-4">
+    <aside className=" flex flex-col items-center sm:flex sm:flex-row md:flex md:flex-col gap-4">
       <div className="bg-colors-backgroundClar2 dark:bg-colors-background2 md:h-auto p-5 rounded-none md:rounded-lg w-full md:w-[400px] flex flex-col gap-2 items-center justify-center">
         <Image
           src={arthur}

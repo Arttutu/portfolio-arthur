@@ -1,16 +1,14 @@
-import Indice from "@/app/Componentes/Indice";
-import { createClient } from "@/prismicio";
-import { asText } from "@prismicio/client";
-import { PrismicImage } from "@prismicio/react";
-import { notFound } from "next/navigation";
-import Link from "next/link";
-import VoltarBotao from "@/app/Componentes/VoltarBotao";
+import Indice from "@/app/Componentes/Indice"
+import { createClient } from "@/prismicio"
+import { asText } from "@prismicio/client"
+import { PrismicImage } from "@prismicio/react"
+import VoltarBotao from "@/app/Componentes/VoltarBotao"
 
 export default async function Poster({ params }) {
-  const prismicClient = createClient();
+  const prismicClient = createClient()
   const post = await prismicClient
     .getByUID("blog", params.uid)
-    .catch(() => redirect("/not_found"));
+    .catch(() => redirect("/not_found"))
 
   return (
     <div className="container flex gap-4">
@@ -22,9 +20,9 @@ export default async function Poster({ params }) {
           <div
             key={index}
             id={`${asText(item.title)}`}
-            className="flex flex-col gap-4 mt-8"
+            className="flex flex-col "
           >
-            <h1 className="text-xl font-bold dark:text-colors-paragrafo text-colors-paragrafo2">
+            <h1 className="text-xl font-bold my-4 dark:text-colors-paragrafo text-colors-paragrafo2">
               {asText(item.title)}
             </h1>
             <h2>{asText(item.subtitile)}</h2>
@@ -33,7 +31,7 @@ export default async function Poster({ params }) {
               {asText(item.conteudo)}
             </p>
             <PrismicImage
-              className="w-full mx-auto mt-4 md:w-1/2 h-auto rounded-lg object-cover"
+              className="w-full mx-auto mt-4 md:w-full h-autoobject-cover"
               field={item.imagens}
             />
           </div>
@@ -51,5 +49,5 @@ export default async function Poster({ params }) {
         </div>
       </div>
     </div>
-  );
+  )
 }

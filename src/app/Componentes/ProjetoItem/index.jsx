@@ -16,7 +16,7 @@ import {
 } from "react-icons/si";
 import { FaReact, FaExternalLinkAlt as Ancora } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { PrismicRichText } from "@prismicio/react";
+import { PrismicImage, PrismicRichText } from "@prismicio/react";
 import { motion } from "framer-motion"; // Importando Framer Motion
 
 const iconMap = {
@@ -44,7 +44,7 @@ export function ProjetosItem({ projetos }) {
         transition={{ type: "spring", stiffness: 300 }} // Transição suave
         className=" flex flex-col  gap-2 p-4 w-full bg-colors-backgroundClaro dark:bg-colors-background rounded-lg cursor-pointer"
       >
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-4">
           <div className="flex justify-between items-center">
             <h3 className="dark:text-colors-textoPrincipal text-xl transition-opacity duration-200 text-colors-destaque hover:opacity-70 flex items-center gap-2">
               <PrismicRichText field={projetos.data.titulo} />
@@ -59,6 +59,10 @@ export function ProjetosItem({ projetos }) {
               {asText(projetos.data.descriaoprojeto)}
             </p>
           </div>
+          <PrismicImage
+            className="w-[600px] rounded-lg"
+            field={projetos.data.imagemprojeto}
+          />
         </div>
         <div className="flex flex-wrap items-center mt-4 gap-4">
           {projetos.data.tecnologias.map((item, index) => (
