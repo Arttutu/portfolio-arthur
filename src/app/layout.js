@@ -1,7 +1,7 @@
-import "./globals.css";
-import { JetBrains_Mono } from "next/font/google";
+import "./globals.css"
+import { Montserrat } from "next/font/google"
 
-const fonte = JetBrains_Mono({ subsets: ["latin"] });
+const fonte = Montserrat({ subsets: ["latin"] })
 
 export const metadata = {
   title: "Portfólio - Arthur Gomes",
@@ -10,7 +10,7 @@ export const metadata = {
   icons: {
     icon: "/assets/favicon.ico", // Caminho correto para o favicon
   },
-};
+}
 
 export default function RootLayout({ children }) {
   return (
@@ -21,5 +21,5 @@ export default function RootLayout({ children }) {
         {children}
       </body>
     </html>
-  );
+  )
 }

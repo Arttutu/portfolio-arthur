@@ -1,15 +1,15 @@
 // src/app/page.tsx
-import { createClient } from "@/prismicio";
-import { ProjetosItem } from "@/app/Componentes/ProjetoItem";
-import Titles from "@/app/Componentes/Titles";
+import { createClient } from "@/prismicio"
+import { ProjetosItem } from "@/app/Componentes/ProjetoItem"
+import Titles from "@/app/Componentes/Titles"
 
 export default async function Projetos() {
-  const prismicClient = createClient();
+  const prismicClient = createClient()
   const projetos = await prismicClient.getAllByType("projetos").catch((e) => {
-    console.error(e);
-  });
+    console.error(e)
+  })
   return (
-    <section className="w-full bg-colors-backgroundClar2 dark:bg-colors-background2  mt-4 mb-4 p-4  rounded-none md:rounded-lg">
+    <section className="w-full bg-colors-backgroundClar2 dark:bg-colors-background2  mt-4 mb-4 p-0 md:p-4  rounded-none md:rounded-lg">
       <Titles title={"Portfólio"} />
       <p className="text-lg dark:text-colors-paragrafo text-colors-paragrafo2">
         Meu portfólio contém projetos de programação que já desenvolvi.
@@ -20,5 +20,5 @@ export default async function Projetos() {
         ))}
       </div>
     </section>
-  );
+  )
 }
