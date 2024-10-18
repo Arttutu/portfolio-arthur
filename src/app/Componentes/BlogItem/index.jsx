@@ -12,7 +12,7 @@ export default function BlogItem({ blog }) {
           className=" w-full  pb-4  xl:w-[300px]  xl:h-[200px] object-cover  xl:rounded-lg xl:m-4"
           field={blog.data.bannercard}
         />
-        <div className="flex flex-col gap-2 md:gap-4">
+        <div className="flex flex-col gap-2 ">
           <Link href={`/Poster/${blog.uid}`}>
             <h2 className="dark:text-colors-textoPrincipal p-4 font-bold text-xl transition-opacity duration-200 text-colors-destaque hover:opacity-70">
               {asText(blog.data.title)}

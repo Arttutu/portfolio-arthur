@@ -22,16 +22,25 @@ export default async function Poster({ params }) {
             id={`${asText(item.title)}`}
             className="flex flex-col "
           >
-            <h1 className="text-xl  font-bold my-4 dark:text-colors-paragrafo text-colors-paragrafo2 px-4 py-2">
-              {asText(item.title)}
-            </h1>
+            {asText(item.title) ? (
+              <h1 className="text-xl  font-bold my-4 dark:text-colors-paragrafo text-colors-paragrafo2 px-4 py-2">
+                {asText(item.title)}
+              </h1>
+            ) : (
+              ""
+            )}
+
             <h2 lassName="text-lg p-4 dark:text-colors-paragrafo text-colors-paragrafo2 px-4 py-2">
               {asText(item.subtitile)}
             </h2>
+            {asText(item.conteudo) ? (
+              <p className="text-md   dark:text-colors-paragrafo text-colors-paragrafo2 p-4">
+                {asText(item.conteudo)}
+              </p>
+            ) : (
+              ""
+            )}
 
-            <p className="text-md   dark:text-colors-paragrafo text-colors-paragrafo2 p-4">
-              {asText(item.conteudo)}
-            </p>
             <PrismicImage
               className="w-full mx-auto mt-4 md:w-full h-autoobject-cover"
               field={item.imagens}

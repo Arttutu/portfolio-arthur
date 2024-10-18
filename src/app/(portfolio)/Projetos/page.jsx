@@ -10,10 +10,12 @@ export default async function Projetos() {
   })
   return (
     <section className="w-full bg-colors-backgroundClar2 dark:bg-colors-background2  mt-4 mb-4 p-0 md:p-4  rounded-none md:rounded-lg">
-      <Titles title={"Portfólio"} />
-      <p className="text-lg dark:text-colors-paragrafo text-colors-paragrafo2">
-        Meu portfólio contém projetos de programação que já desenvolvi.
-      </p>
+      <div className="p-4">
+        <Titles title={"Meu Blog"} />
+        <p className="text-lg dark:text-colors-paragrafo text-colors-paragrafo2">
+          Blog onde vou escrever sobre tutoriais e dicas de programação.
+        </p>
+      </div>
       <div className="flex flex-col gap-8 mt-8 ">
         {projetos.map((projeto) => (
           <ProjetosItem key={projeto.id} projetos={projeto} />
