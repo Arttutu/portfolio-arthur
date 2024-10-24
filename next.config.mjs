@@ -10,7 +10,7 @@ const nextConfig = {
       },
     ],
   },
-};
+}
 
-export default nextConfig;
+export default nextConfig
 /** @type {import('next').NextConfig} */

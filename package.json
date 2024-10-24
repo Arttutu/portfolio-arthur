@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && mv out dist",
+    "build": "next build",
+    "export": "next build && next export",
     "start": "next start",
     "lint": "next lint",
     "slicemachine": "start-slicemachine"
