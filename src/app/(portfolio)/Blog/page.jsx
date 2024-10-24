@@ -5,13 +5,9 @@ import { createClient } from "@/prismicio"
 
 export default async function Blog() {
   const prismicClient = createClient()
-  let Blog
-  try {
-    Blog = await prismicClient.getAllByType("blog")
-  } catch (error) {
-    console.error("Erro ao buscar dados do blog:", error)
-    return <div>Ocorreu um erro ao carregar os posts do blog.</div>
-  }
+  const Blog = await prismicClient.getAllByType("blog").catch((e) => {
+    console.error(e)
+  })
 
   return (
     <section className="bg-colors-background2 p-4 mt-4">
