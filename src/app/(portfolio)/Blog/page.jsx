@@ -12,7 +12,7 @@ export default async function Blog() {
     <section className="dark:bg-colors-background2 bg-colors-backgroundClar2 rounded-none md:rounded-lg p-4 mt-4">
       <>
         <div className="p-4">
-          <Titles title={"Meu Bloge"} />
+          <Titles title={"Meu Blog"} />
           <p className="text-lg dark:text-colors-paragrafo text-colors-paragrafo2">
             Meu blog com dicas de tecnologias e um pouco sobre minhas
             trajetórias
