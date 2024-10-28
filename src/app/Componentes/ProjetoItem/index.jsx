@@ -19,6 +19,7 @@ import {
   SiCss3,
   SiBootstrap,
   SiStyledcomponents,
+  SiAxios,
 } from "react-icons/si"
 import { FaReact, FaExternalLinkAlt as Ancora } from "react-icons/fa"
 import { BiLogoPostgresql } from "react-icons/bi"
@@ -114,6 +115,11 @@ const iconMap = {
   StyledComponentes: (
     <span style={{ backgroundColor: "#ac2d99" }} className="p-2 rounded-full">
       <SiStyledcomponents className="text-white" />
+    </span>
+  ),
+  Axios: (
+    <span style={{ backgroundColor: "#ac2d99" }} className="p-2 rounded-full">
+      <SiAxios className="text-white" />
     </span>
   ),
 }
