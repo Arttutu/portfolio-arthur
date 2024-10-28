@@ -18,6 +18,7 @@ import {
   SiHtml5,
   SiCss3,
   SiBootstrap,
+  SiStyledcomponents,
 } from "react-icons/si"
 import { FaReact, FaExternalLinkAlt as Ancora } from "react-icons/fa"
 import { BiLogoPostgresql } from "react-icons/bi"
@@ -108,6 +109,11 @@ const iconMap = {
   Bootstrap: (
     <span style={{ backgroundColor: "#A020F0" }} className="p-2 rounded-full">
       <SiBootstrap className="text-white" />
+    </span>
+  ),
+  StyledComponentes: (
+    <span style={{ backgroundColor: "#ac2d99" }} className="p-2 rounded-full">
+      <SiStyledcomponents className="text-white" />
     </span>
   ),
 }
