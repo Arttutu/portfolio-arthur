@@ -13,6 +13,11 @@ import {
   SiMongodb,
   SiFigma,
   SiPrismic,
+  SiDocker,
+  SiAuth0,
+  SiHtml5,
+  SiCss3,
+  SiBootstrap,
 } from "react-icons/si"
 import { FaReact, FaExternalLinkAlt as Ancora } from "react-icons/fa"
 import { BiLogoPostgresql } from "react-icons/bi"
@@ -83,6 +88,26 @@ const iconMap = {
   Figma: (
     <span style={{ backgroundColor: "#F24E1E" }} className="p-2 rounded-full">
       <SiFigma className="text-white" />
+    </span>
+  ),
+  Docker: (
+    <span style={{ backgroundColor: "#F24E1E" }} className="p-2 rounded-full">
+      <SiDocker className="text-white" />
+    </span>
+  ),
+  HTML: (
+    <span style={{ backgroundColor: "#336791" }} className="p-2 rounded-full">
+      <SiHtml5 className="text-white" />
+    </span>
+  ),
+  CSS: (
+    <span style={{ backgroundColor: "#0c17eb" }} className="p-2 rounded-full">
+      <SiCss3 className="text-white" />
+    </span>
+  ),
+  Bootstrap: (
+    <span style={{ backgroundColor: "#A020F0" }} className="p-2 rounded-full">
+      <SiBootstrap className="text-white" />
     </span>
   ),
 }
