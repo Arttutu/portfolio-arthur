@@ -11,8 +11,8 @@ export const Buscador = ({ Blog }) => {
     <input
       value={valor}
       onChange={ValorInput}
-      className="w-full rounded-lg p-2 mt-4 outline-none"
-      placeholder="Busque uma postagem"
+      className="w-full rounded-lg  p-2 mt-4 outline-none dark:bg-colors-background dark:text-colors-textoPrincipal text-black"
+      placeholder="Busque uma postagem por título ou descrição..."
     />
   )
 }

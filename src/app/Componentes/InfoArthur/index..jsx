@@ -1,34 +1,34 @@
-"use client";
-import { useEffect, useState } from "react";
-import Image from "next/image";
-import arthur from "../../assets/img/arthur.jpeg";
-import { RiGithubLine, RiLinkedinFill } from "react-icons/ri";
-import { MdEmail } from "react-icons/md";
-import { IoMdPin } from "react-icons/io";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+"use client"
+import { useEffect, useState } from "react"
+import Image from "next/image"
+import arthur from "../../assets/img/arthur.jpeg"
+import { RiGithubLine, RiLinkedinFill } from "react-icons/ri"
+import { MdEmail } from "react-icons/md"
+import { IoMdPin } from "react-icons/io"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 export default function Info() {
-  const [isMobile, setIsMobile] = useState(false);
-  const paginaAtual = usePathname();
+  const [isMobile, setIsMobile] = useState(false)
+  const paginaAtual = usePathname()
 
   useEffect(() => {
     const handleResize = () => {
       // Verifica se a tela é mobile (menor que 768px)
-      setIsMobile(window.innerWidth < 768);
-    };
+      setIsMobile(window.innerWidth < 768)
+    }
 
-    handleResize(); // Chama ao carregar a página
-    window.addEventListener("resize", handleResize);
+    handleResize() // Chama ao carregar a página
+    window.addEventListener("resize", handleResize)
 
     return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
 
   // Se for mobile e não estiver na rota "/", não renderiza o componente
   if ((isMobile && paginaAtual !== "/") || paginaAtual == "/Galeria") {
-    return null;
+    return null
   }
 
   return (
@@ -94,5 +94,5 @@ export default function Info() {
         </div>
       </div>
     </aside>
-  );
+  )
 }

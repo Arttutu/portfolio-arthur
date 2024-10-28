@@ -1,7 +1,9 @@
 import "./globals.css"
-import { Montserrat } from "next/font/google"
+/* import { Montserrat } from "next/font/google" */
 
-const fonte = Montserrat({ subsets: ["latin"] })
+import { Azeret_Mono } from "next/font/google"
+
+const fonte = Azeret_Mono({ subsets: ["latin"], weight: "400" })
 
 export const metadata = {
   title: "Portfólio - Arthur Gomes",

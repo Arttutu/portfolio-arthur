@@ -1,4 +1,4 @@
-import { asDate, asText } from "@prismicio/client"
+import { asText } from "@prismicio/client"
 import { PrismicImage } from "@prismicio/react"
 import { FaCalendar } from "react-icons/fa"
 import dayjs from "dayjs"
@@ -6,7 +6,7 @@ import Link from "next/link"
 
 export default function BlogItem({ blog }) {
   return (
-    <div className="mt-8 w-full container ">
+    <div className="mt-8 w-full  ">
       <article className="w-full xl:w-[750px] 2xl:w-[1100px] md:flex-col items-center md:flex xl:flex xl:flex-row-reverse gap-8  justify-between md:gap-8  bg-colors-backgroundClaro dark:bg-colors-background rounded-none md:rounded-lg">
         <PrismicImage
           className=" w-full  pb-4  xl:w-[300px]  xl:h-[200px] object-cover  xl:rounded-lg xl:m-4"

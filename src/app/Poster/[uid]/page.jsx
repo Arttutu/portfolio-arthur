@@ -3,15 +3,6 @@ import { createClient } from "@/prismicio"
 import { asText } from "@prismicio/client"
 import { PrismicImage } from "@prismicio/react"
 
-export async function generateStaticParams() {
-  const prismicClient = createClient()
-  const posts = await prismicClient.getAllByType("blog")
-
-  return posts.map((post) => ({
-    uid: post.uid,
-  }))
-}
-
 export default async function Poster({ params }) {
   const prismicClient = createClient()
   const post = await prismicClient
