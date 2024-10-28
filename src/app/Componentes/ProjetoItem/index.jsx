@@ -98,16 +98,16 @@ export function ProjetosItem({ projetos }) {
       >
         <div className="flex flex-col gap-4">
           <div className="flex justify-between items-center">
-            <h3 className="dark:text-colors-textoPrincipal font-bold text-xl transition-opacity duration-200 text-colors-destaque hover:opacity-70 flex items-center gap-2">
+            <h3 className="dark:text-colors-textoPrincipal font-bold text-lg md:text-xl transition-opacity duration-200 text-colors-destaque hover:opacity-70 flex items-center gap-2">
               <PrismicRichText field={projetos.data.titulo} />
             </h3>
             <Ancora className="dark:text-colors-paragrafo text-colors-paragrafo2 text-lg" />
           </div>
-          <h2 className="text-colors-paragrafo2 font-semibold dark:text-colors-paragrafo text-lg">
+          <h2 className="text-colors-paragrafo2 font-semibold dark:text-colors-paragrafo text-md md:text-lg">
             {asText(projetos.data.subtitulo)}
           </h2>
           <div className="bg-colors-backgroundClar2 dark:bg-colors-background2 rounded-lg flex flex-col items-center gap-4 p-4">
-            <p className="text-colors-paragrafo2 dark:text-colors-paragrafo text-md text-left">
+            <p className="text-colors-paragrafo2 dark:text-colors-paragrafo tex-sm md:text-md text-left">
               {asText(projetos.data.descriaoprojeto)}
             </p>
             <PrismicImage

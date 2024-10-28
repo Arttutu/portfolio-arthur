@@ -14,11 +14,11 @@ export default function BlogItem({ blog }) {
         />
         <div className="flex flex-col gap-2 ">
           <Link href={`/Poster/${blog.uid}`}>
-            <h2 className="dark:text-colors-textoPrincipal p-4 font-bold text-xl transition-opacity duration-200 text-colors-destaque hover:opacity-70">
+            <h2 className="dark:text-colors-textoPrincipal p-4 font-bold text-lg md:text-xl transition-opacity duration-200 text-colors-destaque hover:opacity-70">
               {asText(blog.data.title)}
             </h2>
           </Link>
-          <p className="text-colors-paragrafo2  p-4 dark:text-colors-paragrafo text-md">
+          <p className="text-colors-paragrafo2  p-4 dark:text-colors-paragrafo text-sm md:text-md">
             {asText(blog.data.descricaocard)}
           </p>
           <span className="dark:text-colors-paragrafo  p-4 text-colors-paragrafo2 flex items-center gap-2">
