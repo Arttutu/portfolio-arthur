@@ -11,8 +11,8 @@ export default async function Poster({ params }) {
 
   return (
     <div className="container flex gap-4">
-      <div className="w-full md:w-3/4 rounded-none md:rounded-lg dark:bg-colors-background2 bg-colors-backgroundClar2 flex flex-col gap-4 pb-8">
-        <h1 className="text-2xl text-left text-colors-destaque p-4">
+      <div className="w-full md:w-3/4 rounded-none sm:rounded-lg dark:bg-colors-background2 bg-colors-backgroundClar2 flex flex-col gap-4 pb-8">
+        <h1 className="text-2xl text-left text-colors-destaque uppercase underline p-4">
           {asText(post.data.title)}
         </h1>
         {post.data.conteudo.map((item, index) => (
@@ -41,7 +41,7 @@ export default async function Poster({ params }) {
           </div>
         ))}
       </div>
-      <div className="hidden md:block w-1/4">
+      <div className="hidden md:block w-auto">
         <div className="sticky top-2 flex flex-col gap-4">
           <Indice post={post} />
         </div>

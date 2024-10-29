@@ -12,7 +12,7 @@ export default function layout({ children }) {
         <Header mobile={true} />
       </header>
       <main className="relative">
-        <div className="container  mx-auto px-0 md:px-12 flex flex-col  md:flex md:flex-row gap-4 mt-[20px]">
+        <div className="container  mx-auto px-0 md:px-12 flex flex-col  sm:flex sm:flex-row gap-4 mt-[20px]">
           <Info />
           <div>
             <Header mobile={false} />

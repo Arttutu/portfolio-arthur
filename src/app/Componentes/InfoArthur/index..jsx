@@ -14,26 +14,23 @@ export default function Info() {
 
   useEffect(() => {
     const handleResize = () => {
-      // Verifica se a tela é mobile (menor que 768px)
-      setIsMobile(window.innerWidth < 768)
+      setIsMobile(window.innerWidth < 1268)
     }
 
-    handleResize() // Chama ao carregar a página
+    handleResize()
     window.addEventListener("resize", handleResize)
 
     return () => {
       window.removeEventListener("resize", handleResize)
     }
   }, [])
-
-  // Se for mobile e não estiver na rota "/", não renderiza o componente
   if ((isMobile && paginaAtual !== "/") || paginaAtual == "/Galeria") {
     return null
   }
 
   return (
     <aside className=" flex flex-col items-center sm:flex sm:flex-row md:flex md:flex-col gap-4">
-      <div className="bg-colors-backgroundClar2 dark:bg-colors-background2 md:h-auto p-5 rounded-none md:rounded-lg w-full md:w-[400px] flex flex-col gap-2 items-center justify-center">
+      <div className="bg-colors-backgroundClar2 dark:bg-colors-background2  sm:h-[320px] md:h-auto p-5 rounded-none sm:rounded-lg w-full md:w-[400px] flex flex-col gap-4 items-center justify-center">
         <Image
           src={arthur}
           alt="minha foto"
@@ -41,10 +38,10 @@ export default function Info() {
           height={120}
           className="rounded-lg"
         />
-        <h1 className="text-black dark:text-colors-textoPrincipal text-xl md:text-lg font-bold">
+        <h1 className="text-black dark:text-colors-textoPrincipal sm:text-center md:text-start text-lg md:text-xl font-bold">
           Arthur Gomes dos Santos
         </h1>
-        <h2 className="text-colors-destaque text-lg md:text-lg font-bold">
+        <h2 className="text-colors-destaque sm:text-center md:text-start text-md md:text-lg font-bold">
           Desenvolvedor Full Stack
         </h2>
         <div className="flex gap-4">
@@ -64,7 +61,7 @@ export default function Info() {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col gap-4 w-full md:h-auto bg-colors-backgroundClar2 dark:bg-colors-background2 p-5 rounded-none md:rounded-lg">
+      <div className="flex flex-col gap-4 w-full sm:h-[320px] md:h-auto bg-colors-backgroundClar2 dark:bg-colors-background2 p-5 rounded-none sm:rounded-lg">
         <div className="flex items-center gap-4">
           <div className="p-2 rounded-lg bg-colors-background">
             <MdEmail className="text-colors-paragrafo text-2xl" />
