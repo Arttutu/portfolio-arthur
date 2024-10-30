@@ -72,6 +72,13 @@
           "thumbnails": []
         }
       },
+      "dataprojeto": {
+        "type": "Date",
+        "config": {
+          "label": "DataProjeto",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

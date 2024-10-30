@@ -1,10 +1,11 @@
 "use client"
 import Link from "next/link"
 import { asText } from "@prismicio/client"
-import { FaExternalLinkAlt as Ancora } from "react-icons/fa"
+import { FaExternalLinkAlt as Ancora, FaCalendar } from "react-icons/fa"
 import { PrismicImage, PrismicRichText } from "@prismicio/react"
 import { motion } from "framer-motion" // Importando Framer Motion
 import icon from "../Utils/IconsTec"
+import dayjs from "dayjs"
 
 export function ProjetosItem({ projetos }) {
   return (
@@ -35,15 +36,22 @@ export function ProjetosItem({ projetos }) {
             />
           </div>
         </div>
-        <div className="flex flex-wrap items-center mt-4 gap-4">
-          {projetos.data.tecnologias.map((item, index) => (
-            <ul key={index} className="rounded-lg bg-colors-background2 p-2">
-              <li className="text-sm text-colors-paragrafo flex gap-2 items-center">
-                {icon[item.tecnologiasnome]}
-                {item.tecnologiasnome}
-              </li>
-            </ul>
-          ))}
+        <div className=" flex justify-between  gap-4 flex-wrap items-center mt-4 ">
+          <div className="flex gap-4 w-full md:w-2/3 flex-wrap">
+            {projetos.data.tecnologias.map((item, index) => (
+              <ul key={index} className="rounded-lg bg-colors-background2 p-2">
+                <li className="text-sm text-colors-paragrafo flex gap-2 items-center">
+                  {icon[item.tecnologiasnome]}
+                  {item.tecnologiasnome}
+                </li>
+              </ul>
+            ))}
+          </div>
+
+          <span className=" dark:text-colors-paragrafo  p-4 text-colors-paragrafo2 flex items-center gap-2">
+            <FaCalendar className="text-colors-destaque" />
+            {dayjs(projetos.data.dataprojeto).format("DD/MM/YYYY")}
+          </span>
         </div>
       </motion.div>
     </Link>

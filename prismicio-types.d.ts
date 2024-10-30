@@ -346,6 +346,17 @@ interface ProjetosDocumentData {
   imagemprojeto: prismic.ImageField<never>;
 
   /**
+   * DataProjeto field in *projetos*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: projetos.dataprojeto
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  dataprojeto: prismic.DateField;
+
+  /**
    * Slice Zone field in *projetos*
    *
    * - **Field Type**: Slice Zone
