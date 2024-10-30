@@ -15,7 +15,7 @@ export default async function Blog() {
     <BodySessao>
       <EspacamentoMobile>
         <Titles title={"Meu Blog"} />
-        <p className="text-lg dark:text-colors-paragrafo text-colors-paragrafo2">
+        <p className="text-md sm:text-lg dark:text-colors-paragrafo text-colors-paragrafo2">
           Meu blog com dicas de tecnologias e um pouco sobre minhas trajetórias
         </p>
       </EspacamentoMobile>

@@ -36,7 +36,7 @@ export function ProjetosItem({ projetos }) {
             />
           </div>
         </div>
-        <div className=" flex justify-between  gap-4 flex-wrap items-center mt-4 ">
+        <div className="flex justify-between gap-4 flex-wrap items-center mt-4">
           <div className="flex gap-4 w-full md:w-2/3 flex-wrap">
             {projetos.data.tecnologias.map((item, index) => (
               <ul key={index} className="rounded-lg bg-colors-background2 p-2">
@@ -48,7 +48,7 @@ export function ProjetosItem({ projetos }) {
             ))}
           </div>
 
-          <span className=" dark:text-colors-paragrafo  p-4 text-colors-paragrafo2 flex items-center gap-2">
+          <span className="dark:text-colors-paragrafo p-4 text-colors-paragrafo2 flex items-center gap-2">
             <FaCalendar className="text-colors-destaque" />
             {dayjs(projetos.data.dataprojeto).format("DD/MM/YYYY")}
           </span>

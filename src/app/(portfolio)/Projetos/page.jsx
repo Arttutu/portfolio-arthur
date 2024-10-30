@@ -14,7 +14,7 @@ export default async function Projetos() {
     <BodySessao>
       <EspacamentoMobile>
         <Titles title={"Meu Portfólio"} />
-        <p className="text-lg dark:text-colors-paragrafo text-colors-paragrafo2">
+        <p className="text-md sm:text-lg dark:text-colors-paragrafo text-colors-paragrafo2">
           Meu portfólio com alguns dos projetos que já desenvolvi.
         </p>
       </EspacamentoMobile>
