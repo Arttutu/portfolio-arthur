@@ -1,6 +1,6 @@
-"use client";
-import Link from "next/link";
-import { motion } from "framer-motion";
+"use client"
+import Link from "next/link"
+import { motion } from "framer-motion"
 export default function Logo() {
   const letterAnimation = {
     hidden: { opacity: 0, y: 50 },
@@ -9,7 +9,7 @@ export default function Logo() {
       y: 0,
       transition: { duration: 0.5 },
     },
-  };
+  }
   const containerAnimation = {
     hidden: { opacity: 0 },
     visible: {
@@ -19,20 +19,20 @@ export default function Logo() {
         duration: 2,
       },
     },
-  };
+  }
   const barraAnimation = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
     },
-  };
+  }
   return (
     <Link id="logo" href="/">
       <motion.span
         initial="hidden"
         animate="visible"
         variants={containerAnimation}
-        className=" text-2xl sm:text-3xl text-colors-titulo font-bold duration-200 hover:dark:text-white hover:text-colors-background transition-all"
+        className=" text-xl sm:text-[24px] text-colors-titulo font-bold duration-200 hover:dark:text-white hover:text-colors-background transition-all"
       >
         {"<ArthurGomes.dev/>".split("").map((letra, index) => (
           <motion.span key={index} variants={letterAnimation}>
@@ -56,5 +56,5 @@ export default function Logo() {
         |
       </motion.span>
     </Link>
-  );
+  )
 }

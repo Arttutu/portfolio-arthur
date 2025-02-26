@@ -1,5 +1,5 @@
-import Menu from "../NavBar";
-import Tema from "../ToogleTema";
+import Menu from "../NavBar"
+import Tema from "../ToogleTema"
 
 export default function Header({ mobile }) {
   return (
@@ -8,8 +8,7 @@ export default function Header({ mobile }) {
        md:flex items-center justify-between`}
     >
       <Menu />
-
       <Tema />
     </div>
-  );
+  )
 }

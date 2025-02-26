@@ -14,7 +14,7 @@ export default function BlogItem({ blog }) {
         />
         <div className="flex flex-col  ">
           <Link href={`/Poster/${blog.uid}`}>
-            <h2 className="dark:text-colors-textoPrincipal p-4 font-bold text-lg md:text-xl transition-opacity duration-200 text-colors-destaque hover:opacity-70">
+            <h2 className="dark:text-colors-textoPrincipal p-4  text-lg md:text-xl transition-opacity duration-200 text-colors-destaque hover:opacity-70">
               {asText(blog.data.title)}
             </h2>
           </Link>

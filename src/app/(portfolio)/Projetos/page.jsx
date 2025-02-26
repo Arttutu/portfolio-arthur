@@ -18,7 +18,6 @@ export default async function Projetos() {
           Meu portfólio com alguns dos projetos que já desenvolvi.
         </p>
       </EspacamentoMobile>
-
       <div className="flex flex-col gap-8 mt-8 ">
         {projetos.map((projeto) => (
           <ProjetosItem key={projeto.id} projetos={projeto} />

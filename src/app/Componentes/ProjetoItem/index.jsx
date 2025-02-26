@@ -3,7 +3,7 @@ import Link from "next/link"
 import { asText } from "@prismicio/client"
 import { FaExternalLinkAlt as Ancora, FaCalendar } from "react-icons/fa"
 import { PrismicImage, PrismicRichText } from "@prismicio/react"
-import { motion } from "framer-motion" // Importando Framer Motion
+import { motion } from "framer-motion"
 import icon from "../Utils/IconsTec"
 import dayjs from "dayjs"
 
@@ -18,12 +18,12 @@ export function ProjetosItem({ projetos }) {
       >
         <div className="flex flex-col gap-4">
           <div className="flex justify-between items-center">
-            <h3 className="dark:text-colors-textoPrincipal font-bold text-lg md:text-xl transition-opacity duration-200 text-colors-destaque hover:opacity-70 flex items-center gap-2">
+            <h3 className="dark:text-colors-textoPrincipal text-lg md:text-xl transition-opacity duration-200 text-colors-destaque hover:opacity-70 flex items-center gap-2">
               <PrismicRichText field={projetos.data.titulo} />
             </h3>
             <Ancora className="dark:text-colors-paragrafo text-colors-paragrafo2 text-lg" />
           </div>
-          <h2 className="text-colors-paragrafo2 font-semibold dark:text-colors-paragrafo text-md md:text-lg">
+          <h2 className="text-colors-paragrafo2  dark:text-colors-paragrafo text-md md:text-[16px]">
             {asText(projetos.data.subtitulo)}
           </h2>
           <div className="bg-colors-backgroundClar2 dark:bg-colors-background2 rounded-lg flex flex-col items-center gap-4 p-4">
@@ -33,6 +33,7 @@ export function ProjetosItem({ projetos }) {
             <PrismicImage
               className="h-auto w-full rounded-b-lg md:w-[600px] md:h-[300px] object-cover md:rounded-lg"
               field={projetos.data.imagemprojeto}
+              alt="imagem do projeto"
             />
           </div>
         </div>

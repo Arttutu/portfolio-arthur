@@ -27,7 +27,6 @@ export default async function Blog() {
       <EspacamentoMobile>
         <Buscador />
       </EspacamentoMobile>
-
       {Blog?.map((blogItem) => (
         <BlogItem key={blogItem.id} blog={blogItem} />
       ))}

@@ -38,10 +38,10 @@ export default function Info() {
           height={120}
           className="rounded-lg"
         />
-        <h1 className="text-black dark:text-colors-textoPrincipal sm:text-center md:text-start text-lg md:text-xl font-bold">
+        <h1 className="text-black dark:text-colors-textoPrincipal sm:text-center md:text-start text-lg md:text-xl ">
           Arthur Gomes dos Santos
         </h1>
-        <h2 className="text-colors-destaque sm:text-center md:text-start text-md md:text-lg font-bold">
+        <h2 className="text-colors-destaque sm:text-center md:text-start text-md md:text-lg ">
           Desenvolvedor Full Stack
         </h2>
         <div className="flex gap-4">
