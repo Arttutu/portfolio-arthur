@@ -6,7 +6,7 @@ import EspacamentoMobile from "@/app/Componentes/UI/EspacamentoMobile"
 import { createClient } from "@/prismicio"
 
 export default async function Blog() {
-  const prismicClient = createClient()
+  const prismicClient = createClient({ fetchOptions: { cache: "no-store" } })
   const Blog = await prismicClient.getAllByType("blog").catch((e) => {
     console.error(e)
   })

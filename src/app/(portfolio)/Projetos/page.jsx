@@ -6,7 +6,7 @@ import EspacamentoMobile from "@/app/Componentes/UI/EspacamentoMobile"
 import BodySessao from "@/app/Componentes/UI/BodySessao"
 
 export default async function Projetos() {
-  const prismicClient = createClient()
+  const prismicClient = createClient({ fetchOptions: { cache: "no-store" } })
   const projetos = await prismicClient.getAllByType("projetos").catch((e) => {
     console.error(e)
   })

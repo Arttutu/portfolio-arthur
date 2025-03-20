@@ -2,6 +2,7 @@ import Indice from "@/app/Componentes/Indice"
 import { createClient } from "@/prismicio"
 import { asText } from "@prismicio/client"
 import { PrismicImage } from "@prismicio/react"
+import { redirect } from "next/navigation"
 
 export default async function Poster({ params }) {
   const prismicClient = createClient()
