@@ -6,7 +6,7 @@ import EspacamentoMobile from "@/app/Componentes/UI/EspacamentoMobile"
 import { createClient } from "@/prismicio"
 
 export default async function Blog() {
-  const prismicClient = createClient({
+  const prismicClient = createClient("arthurgomes", {
     accessToken: process.env.PRISMIC_ACCESS_TOKEN,
     fetchOptions: { cache: "no-store" },
   })
@@ -17,6 +17,7 @@ export default async function Blog() {
   return (
     <BodySessao>
       <EspacamentoMobile>
+        "
         <Titles title={"Meu Blog"} />
         <p className="text-md sm:text-lg dark:text-colors-paragrafo text-colors-paragrafo2">
           Meu blog com dicas de tecnologias e um pouco sobre minhas trajetórias
