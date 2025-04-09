@@ -10,9 +10,15 @@ export default async function Projetos() {
     accessToken: process.env.PRISMIC_ACCESS_TOKEN,
     fetchOptions: { cache: "no-store" },
   })
-  const projetos = await prismicClient.getAllByType("projetos").catch((e) => {
-    console.error(e)
-  })
+  const projetos = await prismicClient
+    .getAllByType("projetos", {
+      orderings: [
+        { field: "document.first_publication_date", direction: "desc" },
+      ],
+    })
+    .catch((e) => {
+      console.error(e)
+    })
   return (
     <BodySessao>
       <EspacamentoMobile>
