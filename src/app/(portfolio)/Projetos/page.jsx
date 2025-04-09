@@ -1,4 +1,5 @@
-// src/app/page.tsx
+export const revalidate = 60 // Atualiza a página a cada 60 segundos
+
 import { createClient } from "@/prismicio"
 import { ProjetosItem } from "@/app/Componentes/ProjetoItem"
 import Titles from "@/app/Componentes/Titles"
@@ -9,6 +10,7 @@ export default async function Projetos() {
   const prismicClient = createClient("arthurgomes", {
     accessToken: process.env.PRISMIC_ACCESS_TOKEN,
   })
+
   const projetos = await prismicClient
     .getAllByType("projetos", {
       orderings: [
@@ -18,6 +20,7 @@ export default async function Projetos() {
     .catch((e) => {
       console.error(e)
     })
+
   return (
     <BodySessao>
       <EspacamentoMobile>

@@ -1,3 +1,5 @@
+export const revalidate = 60
+
 import BlogItem from "@/app/Componentes/BlogItem"
 import { Buscador } from "@/app/Componentes/Buscador"
 import Titles from "@/app/Componentes/Titles"
