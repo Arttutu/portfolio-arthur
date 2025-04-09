@@ -8,7 +8,6 @@ import BodySessao from "@/app/Componentes/UI/BodySessao"
 export default async function Projetos() {
   const prismicClient = createClient("arthurgomes", {
     accessToken: process.env.PRISMIC_ACCESS_TOKEN,
-    fetchOptions: { cache: "no-store" },
   })
   const projetos = await prismicClient
     .getAllByType("projetos", {
